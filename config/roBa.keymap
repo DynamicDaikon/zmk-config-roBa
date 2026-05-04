@@ -30,13 +30,8 @@
         compatible = "zmk,combos";
 
         esc {
-            bindings = <&kp TAB>;
+            bindings = <&kp ESCAPE>;
             key-positions = <0 1>;
-        };
-
-        control {
-            bindings = <&kp LEFT_CONTROL>;
-            key-positions = <10 11>;
         };
 
         minus {
@@ -80,28 +75,28 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W           &kp E         &kp R             &kp T                                                              &kp Y      &kp U  &lt 5 I    &kp O    &kp P
-&kp A             &kp S           &kp D         &kp F             &kp G                   &kp CARET                   &kp SQT        &kp H      &kp J  &kp K      &kp L    &kp SEMICOLON
-&mt LEFT_SHIFT Z  &kp X           &kp C         &kp V             &kp B                   &kp DOLLAR                  &kp BACKSLASH  &kp N      &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp LCTRL         &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_COMMAND  &lt_to_layer_0 3 SPACE  &lt_to_layer_0 1 GRAVE      &kp BACKSPACE  &kp ENTER                             &mo 2
+&kp Q             &kp W         &kp E             &kp R    &kp T                                                              &kp Y      &kp U  &lt 5 I    &kp O    &kp P
+&kp A             &kp S         &kp D             &kp F    &kp G                   &kp CARET                   &kp SQT        &kp H      &kp J  &kp K      &kp L    &kp SEMICOLON
+&mt LEFT_SHIFT Z  &kp X         &kp C             &kp V    &kp B                   &kp DOLLAR                  &kp BACKSLASH  &kp N      &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&kp LCTRL         &kp LEFT_ALT  &kp LEFT_COMMAND  &kp TAB  &lt_to_layer_0 3 SPACE  &lt_to_layer_0 1 GRAVE      &kp BACKSPACE  &kp ENTER                             &mo 2
             >;
         };
 
         bluetooth {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                           &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4
-&trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans         &trans         &trans         &trans         &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &bootloader  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4
+&trans  &trans  &trans  &trans  &trans  &trans      &trans       &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4
+&trans  &trans  &trans  &trans  &trans  &trans      &bootloader  &bt BT_CLR     &bt BT_CLR     &bt BT_CLR     &bt BT_CLR     &bt BT_CLR
 &trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans                                                      &trans
             >;
         };
 
         NUM {
             bindings = <
-&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                             &kp NUMBER_6       &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9     &kp NUMBER_0
-&kp F1        &kp F2        &kp F3        &kp F4        &kp F5        &trans      &kp C_BRI_INC  &kp C_VOLUME_UP    &kp DOWN      &kp UP_ARROW  &trans           &kp DELETE
-&kp F6        &kp F7        &kp F8        &kp F9        &kp F10       &trans      &kp C_BRI_DEC  &kp C_VOLUME_DOWN  &kp LEFT      &kp RIGHT     &kp RIGHT_SHIFT  &trans
-&kp F11       &kp F12       &trans        &trans        &trans        &trans      &trans         &kp C_MUTE                                                      &trans
+&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                             &kp NUMBER_6   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
+&kp C_VOL_DN  &kp C_VOL_UP  &kp K_MUTE    &trans        &trans        &trans      &kp C_BRI_INC  &kp PAGE_UP    &kp DOWN      &kp UP_ARROW  &trans        &kp DELETE
+&trans        &trans        &trans        &trans        &trans        &trans      &kp C_BRI_DEC  &kp PAGE_DOWN  &kp LEFT      &kp RIGHT     &mo 6         &trans
+&trans        &trans        &trans        &trans        &trans        &trans      &trans         &kp C_MUTE                                               &trans
             >;
         };
 
@@ -129,6 +124,15 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp PAGE_DOWN  &trans  &kp END   &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans         &trans  &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                   &trans
+            >;
+        };
+
+        layer_6 {
+            bindings = <
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5                      &kp F6   &kp F7   &kp F8  &kp F9  &kp F10
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp F11  &kp F12  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans   &trans   &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                            &trans
             >;
         };
     };
